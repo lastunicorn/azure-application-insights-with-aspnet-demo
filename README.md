@@ -1,6 +1,17 @@
 ﻿# Azure Application Insights with ASP.NET Demo
 
-Demonstrates how to configure and use Azure Application Insights from an APS.NET Web API application.
+Demonstrates how to configure and use Azure Application Insights from an APS.NET Web API application (.NET Framework).
+
+## Tutorial
+
+The tutorial is located here:
+
+- [Tutorial](/doc/README.md)
+
+The repository contains two branches:
+
+- `master` - The ASP.NET Web API application without Application Insights
+- `01-application-insights` - With Application Insights
 
 ## License
 
