@@ -2,14 +2,25 @@
 
 To use Azure Application Insights within an ASP.NET Web API application the following steps are needed:
 
-- [Create an Application Insights resource](00-create-application-insights.md)
-  - Create an Application Insights resource from Azure Portal
+1. [Create a Resource Group resource](01-create-resource-group.md)
+  - Created from Azure Portal
+  - In this group will create other Azure resources.
 
-- [Connect to the Application Insights](01-configure-application-insights.md)
-  - Configure the ASP.NET application to connect to the Application Insights
+2. [Create a Log Analytical Workspace](02-create-log-analytics-workspace.md)
+  - Created from Azure Portal
 
-- [Query Application Insights](02-query-messages.md)
-  - Query Application Insights for information about endpoint requests
+  - An application Insights resource must be linked to a Log Analytical Workspace
+
+3. [Create an Application Insights resource](03-create-application-insights.md)
+  - Created from Azure Portal
+
+4. [Connect to the Application Insights](01-configure-application-insights.md)
+  - Create an ASP.NET Web API application
+  - Configure the application to connect to the Application Insights
+
+5. [Query Application Insights](02-query-messages.md)
+  - From Azure Portal
+  - Use KQL queries in Application Insights to obtain telemetry information
 
 
 ## References
