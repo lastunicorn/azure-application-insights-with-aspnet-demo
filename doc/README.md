@@ -1,136 +1,29 @@
 # Azure Application Insights with ASP.NET Tutorial
 
-## Step 1 - Install NuGet packages
+To use Azure Application Insights within an ASP.NET Web API application the following steps are needed:
 
-```
-Install-Package Microsoft.ApplicationInsights.WindowsServer
-Install-Package Microsoft.ApplicationInsights.Web
-Install-Package Microsoft.AspNet.TelemetryCorrelation
-```
+1. [Create a Resource Group resource](01-create-resource-group.md)
+  - Created from Azure Portal
+  - In this group will create other Azure resources.
 
-## Step 2 - Create the configuration file
+2. [Create a Log Analytical Workspace](02-create-log-analytics-workspace.md)
+  - Created from Azure Portal
 
-Create the `ApplicationInsights.config`  file:
+  - An application Insights resource must be linked to a Log Analytical Workspace
 
-- (see the example file from the current directory)
+3. [Create an Application Insights resource](03-create-application-insights.md)
+  - Created from Azure Portal
 
-## Step 3 - Add connection string
+4. [Connect to the Application Insights](01-configure-application-insights.md)
+  - Create an ASP.NET Web API application
+  - Configure the application to connect to the Application Insights
 
-You can find the connection string on the overview pane of the Application Insights resource in Azure Portal.
-
-The connection string can be added in config file or in C# code.
-
-### a) In config file
-
-In the `ApplicationInsights.config` created earlier add this element:
-
-```xml
-<ConnectionString>Copy the connection string from your Application Insights resource</ConnectionString>
-```
-
-### b) In C#
-
-The connection string must be provided to the `TelemetryConfiguration` instance:
-
-```csharp
-TelemetryConfiguration configuration = new TelemetryConfiguration()
-{
-    ConnectionString = "Copy the connection string from your Application Insights resource"
-};
-```
-
-## Step 4 - Log errors
-
-### 1) Create a filter class
-
-Create a filter class derived from `HandleErrorAttribute` that will be called for an exception:
-
-```csharp
-[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
-public class AiHandleErrorAttribute : HandleErrorAttribute
-{
-    public override void OnException(ExceptionContext filterContext)
-    {
-        if (filterContext != null && filterContext.HttpContext != null && filterContext.Exception != null)
-        {
-            //If customError is Off, then AI HTTPModule will report the exception
-            if (filterContext.HttpContext.IsCustomErrorEnabled)
-            {
-                TelemetryClient telemetryClient = new TelemetryClient();
-                telemetryClient.TrackException(filterContext.Exception);
-            }
-        }
-        base.OnException(filterContext);
-    }
-}
-```
-
-### 2) Add the filter globally
-
-In the existing `FilterConfig` class from `App_Start` directory, replace the existing instance of the `HandleErrorAttribute` with the newly created `AiHandleErrorAttribute`:
-
-```csharp
-public class FilterConfig
-{
-    public static void RegisterGlobalFilters(GlobalFilterCollection filters)
-    {
-        filters.Add(new AiHandleErrorAttribute());
-    }
-}
-```
-
-## Step 5 - Update `Web.cofig` file
-
-### 1) Add HTTP modules in `<system.web>`
-
-In `<system.web>` element add the following HTTP modules:
-
-- `TelemetryCorrelationHttpModule`
-- `ApplicationInsightsWebTracking`
-
-```xml
-<configuration>
-    ...
-
-    <system.web>
-        ...
-
-        <httpModules>
-            <add name="TelemetryCorrelationHttpModule" type="Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule, Microsoft.AspNet.TelemetryCorrelation" />
-            <add name="ApplicationInsightsWebTracking" type="Microsoft.ApplicationInsights.Web.ApplicationInsightsHttpModule, Microsoft.AI.Web" />
-        </httpModules>
-        
-    </system.web>
-</configuration>
-```
-
-### 2) Add HTTP modules in `<system.webServer>`
-
-Add the same modules in the `<system.webServer>` element:
-
-- `TelemetryCorrelationHttpModule`
-- `ApplicationInsightsWebTracking`
-
-```xml
-<configuration>
-    ...
-
-    <system.webServer>
-        ...
-
-        <modules>
-            <remove name="TelemetryCorrelationHttpModule" />
-            <add name="TelemetryCorrelationHttpModule" type="Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule, Microsoft.AspNet.TelemetryCorrelation" preCondition="managedHandler" />
-            <remove name="ApplicationInsightsWebTracking" />
-            <add name="ApplicationInsightsWebTracking" type="Microsoft.ApplicationInsights.Web.ApplicationInsightsHttpModule, Microsoft.AI.Web" preCondition="managedHandler" />
-        </modules>
-        
-    </system.webServer>
-</configuration>
-```
-
+5. [Query Application Insights](02-query-messages.md)
+  - From Azure Portal
+  - Use KQL queries in Application Insights to obtain telemetry information
 
 
 ## References
 
-- https://learn.microsoft.com/en-us/azure/azure-monitor/app/dotnet?tabs=net%2Cnet-1%2Cserver%2Cportal%2Ccsharp%2Cprocess%2Capi-net
+- https://learn.microsoft.com/en-us/azure/azure-monitor/app/dotnet?tabs=net%2Cnet-1%2Cserver%2Cportal%2Ccsharp%2Cenqueue%2Capi-net
+
