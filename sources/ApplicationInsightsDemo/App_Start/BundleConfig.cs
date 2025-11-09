@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace ApplicationInsightsDemo
+namespace DustInTheWind.ApplicationInsightsDemo
 {
     public class BundleConfig
     {

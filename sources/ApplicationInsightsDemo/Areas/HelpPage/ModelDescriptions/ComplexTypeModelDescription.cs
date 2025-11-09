@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace ApplicationInsightsDemo.Areas.HelpPage.ModelDescriptions
+namespace DustInTheWind.ApplicationInsightsDemo.Areas.HelpPage.ModelDescriptions
 {
     public class ComplexTypeModelDescription : ModelDescription
     {

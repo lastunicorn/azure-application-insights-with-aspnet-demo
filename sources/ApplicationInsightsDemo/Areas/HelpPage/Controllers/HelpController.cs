@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using ApplicationInsightsDemo.Areas.HelpPage.ModelDescriptions;
-using ApplicationInsightsDemo.Areas.HelpPage.Models;
+using DustInTheWind.ApplicationInsightsDemo.Areas.HelpPage.ModelDescriptions;
+using DustInTheWind.ApplicationInsightsDemo.Areas.HelpPage.Models;
 
-namespace ApplicationInsightsDemo.Areas.HelpPage.Controllers
+namespace DustInTheWind.ApplicationInsightsDemo.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

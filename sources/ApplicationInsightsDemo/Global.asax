@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="ApplicationInsightsDemo.WebApiApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="DustInTheWind.ApplicationInsightsDemo.WebApiApplication" Language="C#" %>

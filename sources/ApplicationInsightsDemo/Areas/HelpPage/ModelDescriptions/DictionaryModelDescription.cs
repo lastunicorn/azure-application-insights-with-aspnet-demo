@@ -1,4 +1,4 @@
-namespace ApplicationInsightsDemo.Areas.HelpPage.ModelDescriptions
+namespace DustInTheWind.ApplicationInsightsDemo.Areas.HelpPage.ModelDescriptions
 {
     public class DictionaryModelDescription : KeyValuePairModelDescription
     {

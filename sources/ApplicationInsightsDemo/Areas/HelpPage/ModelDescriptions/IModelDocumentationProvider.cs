@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace ApplicationInsightsDemo.Areas.HelpPage.ModelDescriptions
+namespace DustInTheWind.ApplicationInsightsDemo.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {

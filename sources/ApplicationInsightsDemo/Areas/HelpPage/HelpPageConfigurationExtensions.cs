@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using ApplicationInsightsDemo.Areas.HelpPage.ModelDescriptions;
-using ApplicationInsightsDemo.Areas.HelpPage.Models;
+using DustInTheWind.ApplicationInsightsDemo.Areas.HelpPage.ModelDescriptions;
+using DustInTheWind.ApplicationInsightsDemo.Areas.HelpPage.Models;
 
-namespace ApplicationInsightsDemo.Areas.HelpPage
+namespace DustInTheWind.ApplicationInsightsDemo.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {
