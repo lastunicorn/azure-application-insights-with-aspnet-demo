@@ -1,4 +1,4 @@
-# Create Application Insights
+# Create Azure Application Insights
 
 ## Step 1 - Create new resource
 

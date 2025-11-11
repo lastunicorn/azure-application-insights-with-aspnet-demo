@@ -1,4 +1,4 @@
-# Create Log Analytics Workspace resource
+# Create Azure Log Analytics Workspace resource
 
 ## Step 1 - Create new resource
 

@@ -1,4 +1,4 @@
-# Create Resource Group
+# Create Azure Resource Group
 
 ## Step 1 - Create new resource
 
