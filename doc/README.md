@@ -24,7 +24,7 @@ To use Azure Application Insights within an ASP.NET Web API application the foll
 
 ### II) Configure ASP.NET Application
 
-(4) [Connect to the Application Insights](01-configure-application-insights/README.md)
+(4) [Connect to the Application Insights](04-configure-application-insights/README.md)
 
 - Create an ASP.NET Web API application
 
@@ -32,7 +32,7 @@ To use Azure Application Insights within an ASP.NET Web API application the foll
 
 ### III) Query Logs (in Azure)
 
-(5) [Query Application Insights](02-query-messages/README.md)
+(5) [Query Application Insights](05-query-messages/README.md)
 
 - From Azure Portal
 
