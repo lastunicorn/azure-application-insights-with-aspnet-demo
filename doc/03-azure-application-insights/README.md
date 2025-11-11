@@ -4,11 +4,11 @@
 
 Go to Azure Portal (https://portal.azure.com) and create a new resource
 
-![Create a new resource](03-01-create-new-resource.png)
+![Create a new resource](01-create-new-resource.png)
 
 ## Step 2 - Search for "Application Insights"
 
-![Search for Log Analytics Workspace](03-02-search-application-insights.png)
+![Search for Log Analytics Workspace](02-search-application-insights.png)
 
 ## Step 3 - Create "Application Insights"
 
@@ -27,17 +27,17 @@ Go to Azure Portal (https://portal.azure.com) and create a new resource
   - Choose the previously created `demo-law`
 
 
-![Properties - Basics](03-03-properties-basics.png)
+![Properties - Basics](03-properties-basics.png)
 
 ## Tags
 
 Add tags if necessary.
 
-![Properties - Tags](03-04-properties-tags.png)
+![Properties - Tags](04-properties-tags.png)
 
 ### Review + create
 
-![Properties - Review](03-05-properties-review.png)
+![Properties - Review](05-properties-review.png)
 
 ## Step 4 - Create
 
@@ -45,7 +45,7 @@ Click the "Create" button.
 
 ## Done
 
-![Application Insights](03-06-application-insights.png)
+![Application Insights](06-application-insights.png)
 
 **Note**
 
