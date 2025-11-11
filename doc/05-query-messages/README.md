@@ -4,11 +4,11 @@
 
 In the web browser, open `https://portal.azure.com` and search for your Application Insights resource. In this example it is `demo-appi`:
 
-![Open Application Insights](05-01-open-application-insights.png)
+![Open Application Insights](01-open-application-insights.png)
 
 ## Step 2 - Open "Logs" page
 
-![Logs Page](05-02-logs-page.png)
+![Logs Page](02-logs-page.png)
 
 ## Step 3 - Query for requests
 
@@ -16,4 +16,4 @@ Each time an API endpoint is called, a record is added into the `requests` table
 
 Use KQL language to interrogate the table:
 
-![Query for requests](05-03-query-for-results.png)
+![Query for requests](03-query-for-results.png)
