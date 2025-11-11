@@ -6,19 +6,19 @@ To use Azure Application Insights within an ASP.NET Web API application the foll
 
 ### I) Create Azure Application Insights Resource
 
-(1) [Create a Resource Group resource](01-create-resource-group/README.md)
+(1) [Create a Resource Group resource](01-azure-resource-group/README.md)
 
 - Created from Azure Portal
 
 - In this group will create other Azure resources.
 
-(2) [Create a Log Analytical Workspace](02-create-log-analytics-workspace/README.md)
+(2) [Create a Log Analytical Workspace](02-azure-log-analytics-workspace/README.md)
 
 - Created from Azure Portal
 
 - An application Insights resource must be linked to a Log Analytical Workspace
 
-(3) [Create an Application Insights resource](03-create-application-insights/README.md)
+(3) [Create an Application Insights resource](03-azure-application-insights/README.md)
 
 - Created from Azure Portal
 
